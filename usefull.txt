@@ -1,0 +1,6 @@
+#usefull anaconda commands
+# Create the environment named 'golf_env' with the latest Python
+conda create -n golf_env python=3.14
+
+# Activate it (Crucial step!)
+conda activate golf_env
