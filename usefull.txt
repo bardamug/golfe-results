@@ -10,3 +10,15 @@ script anaconda to environment
 C:\Users\barda\anaconda3\Scripts\activate.bat 
 
 %windir%\System32\cmd.exe "/K" C:\Users\barda\anaconda3\Scripts\activate.bat C:\Users\barda\anaconda3 && conda activate golf_env
+
+
+git update for github web link
+Terminal: flet publish main.py --base-url /golfe-results/
+
+Manual Step: Copy index.html to 404.html inside the dist folder.
+
+Terminal: git add .
+
+Terminal: git commit -m "Corrected base-url"
+
+Terminal: git subtree push --prefix dist origin gh-pages
