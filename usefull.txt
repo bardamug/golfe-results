@@ -4,3 +4,9 @@ conda create -n golf_env python=3.14
 
 # Activate it (Crucial step!)
 conda activate golf_env
+
+
+script anaconda to environment
+C:\Users\barda\anaconda3\Scripts\activate.bat 
+
+%windir%\System32\cmd.exe "/K" C:\Users\barda\anaconda3\Scripts\activate.bat C:\Users\barda\anaconda3 && conda activate golf_env
