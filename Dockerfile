@@ -1,23 +1,22 @@
-FROM python:3.12-slim
-
-# Install system dependencies for Flet
-RUN apt-get update && apt-get install -y \
-    libgtk-3-0 \
-    libpango-1.0-0 \
-    libcairo2 \
-    && rm -rf /var/lib/apt/lists/*
+FROM python:3.11-slim
 
 WORKDIR /app
 
-# Copy requirements and install
+# Copiar arquivos
 COPY requirements.txt .
+COPY main.py .
+COPY app.py .
+COPY cartoes_golfville.csv .
+
+# Instalar dependências
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the rest of your app
-COPY . .
-
-# Expose the port Flet will run on
+# Expor porta
 EXPOSE 7860
 
-# We run it directly with python to avoid the flet-cli desktop dependency check
-CMD ["python", "main.py"]
+# Variáveis de ambiente
+ENV FLET_SERVER_PORT=7860
+ENV FLET_FORCE_WEB_VIEW=true
+
+# Comando para rodar
+CMD ["python", "app.py"]
