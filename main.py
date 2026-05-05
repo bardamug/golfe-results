@@ -385,4 +385,10 @@ def main(page: ft.Page):
 
 
 if __name__ == "__main__":
-    ft.app(target=main)
+    ft.app(
+        target=main, 
+        view=None,             # No desktop window
+        port=7860,             # Mandatory for Hugging Face
+        host="0.0.0.0",        # Listen on all network interfaces
+        export_to_html=False   # Run as a dynamic app
+    )
