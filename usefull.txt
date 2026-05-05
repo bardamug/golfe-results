@@ -1,3 +1,4 @@
+######### ANCONDA stuff
 #usefull anaconda commands
 # Create the environment named 'golf_env' with the latest Python
 conda create -n golf_env python=3.14
@@ -5,13 +6,10 @@ conda create -n golf_env python=3.14
 # Activate it (Crucial step!)
 conda activate golf_env
 
-
 script anaconda to environment
-C:\Users\barda\anaconda3\Scripts\activate.bat 
-
 %windir%\System32\cmd.exe "/K" C:\Users\barda\anaconda3\Scripts\activate.bat C:\Users\barda\anaconda3 && conda activate golf_env
 
-
+##### git creaet branch
 git update for github web link
 Terminal: flet publish main.py --base-url /golfe-results/
 
@@ -22,3 +20,9 @@ Terminal: git add .
 Terminal: git commit -m "Corrected base-url"
 
 Terminal: git subtree push --prefix dist origin gh-pages
+
+========== run py web server locally 
+py -3 -m http.server 8000 --directory dist
+
+test webpage 
+http://localhost:8000
